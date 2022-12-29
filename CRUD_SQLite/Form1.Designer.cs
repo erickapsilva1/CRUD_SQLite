@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtFindByName = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -48,7 +53,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtFindByName);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(335, 2);
             this.panel2.Name = "panel2";
@@ -57,7 +62,9 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnDel);
+            this.panel3.Controls.Add(this.btnUpdate);
+            this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Location = new System.Drawing.Point(0, 386);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(570, 67);
@@ -65,6 +72,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnExit);
             this.panel4.Location = new System.Drawing.Point(569, 386);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 67);
@@ -79,21 +87,56 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Find by Name:";
             // 
-            // textBox1
+            // txtFindByName
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 27);
-            this.textBox1.TabIndex = 1;
+            this.txtFindByName.Location = new System.Drawing.Point(135, 28);
+            this.txtFindByName.Name = "txtFindByName";
+            this.txtFindByName.Size = new System.Drawing.Size(318, 27);
+            this.txtFindByName.TabIndex = 1;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(27, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(23, 7);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(114, 52);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "   Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(178, 7);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(114, 52);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "     Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnDel
+            // 
+            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.Location = new System.Drawing.Point(335, 7);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(114, 52);
+            this.btnDel.TabIndex = 2;
+            this.btnDel.Text = "     Delete";
+            this.btnDel.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(57, 7);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(114, 52);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "     Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -109,6 +152,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -117,10 +161,13 @@
 
         private Panel panel1;
         private Panel panel2;
-        private TextBox textBox1;
+        private TextBox txtFindByName;
         private Label label1;
         private Panel panel3;
-        private Button button1;
+        private Button btnAdd;
         private Panel panel4;
+        private Button btnDel;
+        private Button btnUpdate;
+        private Button btnExit;
     }
 }
