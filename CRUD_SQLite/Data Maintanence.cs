@@ -115,6 +115,8 @@ namespace CRUD_SQLite
                         if(InsertData(student) > 0)
                         {
                             MessageBox.Show("Data has been included.");
+                            
+                            this.Close();
                         }
                         else
                         {
@@ -157,6 +159,11 @@ namespace CRUD_SQLite
                 val_return = false;
 
             return val_return;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

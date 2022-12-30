@@ -117,7 +117,7 @@ namespace CRUD_SQLite
             }
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             dgvStudents.DataSource = ReadData3<SQLiteConnection, SQLiteDataAdapter>("SELECT * FROM STUDENT");
         }
@@ -200,5 +200,16 @@ namespace CRUD_SQLite
             }
             
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            dgvStudents.DataSource = SearchData();
+        }
+
     }
 }

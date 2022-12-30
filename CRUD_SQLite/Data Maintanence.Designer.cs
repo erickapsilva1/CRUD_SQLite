@@ -60,7 +60,7 @@
             this.txtEmail.Location = new System.Drawing.Point(36, 138);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(366, 27);
-            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabIndex = 2;
             // 
             // label2
             // 
@@ -76,7 +76,7 @@
             this.txtAge.Location = new System.Drawing.Point(36, 210);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(114, 27);
-            this.txtAge.TabIndex = 5;
+            this.txtAge.TabIndex = 3;
             // 
             // label3
             // 
@@ -94,9 +94,10 @@
             this.btnExit.Location = new System.Drawing.Point(288, 272);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(114, 52);
-            this.btnExit.TabIndex = 6;
+            this.btnExit.TabIndex = 5;
             this.btnExit.Text = "     Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -105,7 +106,7 @@
             this.btnSave.Location = new System.Drawing.Point(36, 272);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 52);
-            this.btnSave.TabIndex = 7;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "     Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
