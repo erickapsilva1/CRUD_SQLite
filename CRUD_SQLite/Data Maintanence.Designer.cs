@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Maintanence));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -48,19 +48,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 27);
-            this.textBox1.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(36, 65);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(366, 27);
+            this.txtName.TabIndex = 1;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(36, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(366, 27);
-            this.textBox2.TabIndex = 3;
+            this.txtEmail.Location = new System.Drawing.Point(36, 138);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(366, 27);
+            this.txtEmail.TabIndex = 3;
             // 
             // label2
             // 
@@ -71,12 +71,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Email";
             // 
-            // textBox3
+            // txtAge
             // 
-            this.textBox3.Location = new System.Drawing.Point(36, 210);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 27);
-            this.textBox3.TabIndex = 5;
+            this.txtAge.Location = new System.Drawing.Point(36, 210);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(114, 27);
+            this.txtAge.TabIndex = 5;
             // 
             // label3
             // 
@@ -108,6 +108,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "     Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Data_Maintanence
             // 
@@ -116,14 +117,15 @@
             this.ClientSize = new System.Drawing.Size(453, 346);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAge);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Name = "Data_Maintanence";
             this.Text = "Data Maintanence";
+            this.Load += new System.EventHandler(this.Data_Maintanence_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,10 +134,10 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtName;
+        private TextBox txtEmail;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtAge;
         private Label label3;
         private Button btnExit;
         private Button btnSave;
